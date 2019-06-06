@@ -4,12 +4,18 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- define beans  -->
 
-    <!-- Define your beans here -->
-    <bean id="myCoach"
-          class="start.TrackCoach">
+    <!-- define dependency -->
+    <bean id="myFortuneService"
+          class="start.fortune.HappyFortuneService">
     </bean>
 
+    <bean id="myCoach"
+          class="start.coach.TrackCoach">
+        <!-- set up constructor injection -->
+        <constructor-arg ref="myFortuneService"/>
+    </bean>
 
 </beans>
 

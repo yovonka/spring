@@ -1,22 +1,23 @@
 package start;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import start.coach.Coach;
 
 public class XmlConfiguredApp {
 
     public static void main(String[] args) {
 
-        // load the spring configuration file
+        //1. load the spring configuration file
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("start/applicationContext.xml");
 
-        // retrieve bean from spring container
+        //2. retrieve bean from spring container
         Coach theCoach = context.getBean("myCoach", Coach.class);
 
-        // call methods on the bean
+        //3. call methods on the bean
         System.out.println(theCoach.getDailyWorkout());
+        System.out.println(theCoach.getDailyFortune());
 
-        // close the context
         context.close();
     }
 
