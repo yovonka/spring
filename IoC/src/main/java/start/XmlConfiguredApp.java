@@ -20,6 +20,10 @@ public class XmlConfiguredApp {
         System.out.println(theCricketCoach.getDailyWorkout());
         System.out.println(theCricketCoach.getDailyFortune());
 
+        //4. call our new methods to get the literal values
+        System.out.println(theCricketCoach.getEmailAddress());
+        System.out.println(theCricketCoach.getTeam());
+
         context.close();
     }
 
