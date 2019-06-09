@@ -2,6 +2,7 @@ package start;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import start.coach.Coach;
+import start.coach.CricketCoach;
 
 public class XmlConfiguredApp {
 
@@ -13,10 +14,11 @@ public class XmlConfiguredApp {
 
         //2. retrieve bean from spring container
         Coach theCoach = context.getBean("myCoach", Coach.class);
+        CricketCoach theCricketCoach = context.getBean("myCricketCoach", CricketCoach.class);
 
         //3. call methods on the bean
-        System.out.println(theCoach.getDailyWorkout());
-        System.out.println(theCoach.getDailyFortune());
+        System.out.println(theCricketCoach.getDailyWorkout());
+        System.out.println(theCricketCoach.getDailyFortune());
 
         context.close();
     }
