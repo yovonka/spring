@@ -18,7 +18,9 @@
     </bean>
 
     <bean id="myCoach"
-          class="start.coach.TrackCoach">
+          class="start.coach.TrackCoach"
+          init-method="doMyStartupStuff"
+          destroy-method="doMyCleanupStuff">
         <!-- set up constructor injection -->
         <constructor-arg ref="myFortuneService"/>
     </bean>
