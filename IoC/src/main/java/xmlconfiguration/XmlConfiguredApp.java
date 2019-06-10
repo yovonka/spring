@@ -1,8 +1,8 @@
-package start;
+package xmlconfiguration;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import start.coach.Coach;
-import start.coach.CricketCoach;
+import xmlconfiguration.coach.Coach;
+import xmlconfiguration.coach.CricketCoach;
 
 public class XmlConfiguredApp {
 
@@ -10,7 +10,7 @@ public class XmlConfiguredApp {
 
         //1. load the spring configuration file
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("start/applicationContext.xml");
+                new ClassPathXmlApplicationContext("xmlconfiguration/applicationContext.xml");
 
         //2. retrieve bean from spring container
         Coach theCoach = context.getBean("myCoach", Coach.class);

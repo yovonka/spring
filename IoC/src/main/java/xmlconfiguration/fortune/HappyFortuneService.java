@@ -1,4 +1,4 @@
-package start.fortune;
+package xmlconfiguration.fortune;
 
 public class HappyFortuneService implements FortuneService {
 

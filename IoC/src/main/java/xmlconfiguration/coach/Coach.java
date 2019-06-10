@@ -1,4 +1,4 @@
-package start.coach;
+package xmlconfiguration.coach;
 
 public interface Coach {
 
