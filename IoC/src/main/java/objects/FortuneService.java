@@ -1,4 +1,4 @@
-package xmlconfiguration.fortune;
+package objects;
 
 public interface FortuneService {
 

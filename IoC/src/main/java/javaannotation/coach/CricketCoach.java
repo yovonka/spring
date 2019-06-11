@@ -1,22 +1,27 @@
-package xmlconfiguration.coach;
+package javaannotation.coach;
 
 import objects.Coach;
 import objects.FortuneService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CricketCoach implements Coach {
 
+    @Autowired                           //java reflection - no need setter methods
+    @Qualifier("randomFortuneService")     //deal with no unique bean def if more components
     private FortuneService fortuneService;
-    private String emailAddress;
-    private String team;
 
     public CricketCoach() {
         System.out.println("CricketCoach: inside no-arg constructor");
     }
 
+/* @Autowired // it could be any method not necessary setter
     public void setFortuneService(FortuneService fortuneService) {
         System.out.println("CricketCoach: inside setter method - setFortuneService");
         this.fortuneService = fortuneService;
-    }
+    }*/
 
     @Override
     public String getDailyWorkout() {
@@ -28,21 +33,4 @@ public class CricketCoach implements Coach {
         return fortuneService.getFortune();
     }
 
-    public void setEmailAddress(String emailAddress) {
-        System.out.println("CricketCoach: inside setter method - setEmailAddress");
-        this.emailAddress = emailAddress;
-    }
-
-    public String getEmailAddress() {
-        return emailAddress;
-    }
-
-    public void setTeam(String team) {
-        System.out.println("CricketCoach: inside setter method - setTeam");
-        this.team = team;
-    }
-
-    public String getTeam() {
-        return team;
-    }
 }
