@@ -1,5 +1,7 @@
 package xmlconfiguration.fortune;
 
+import objects.FortuneService;
+
 public class HappyFortuneService implements FortuneService {
 
     @Override

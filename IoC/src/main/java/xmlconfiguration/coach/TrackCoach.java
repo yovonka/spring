@@ -1,6 +1,7 @@
 package xmlconfiguration.coach;
 
-import xmlconfiguration.fortune.FortuneService;
+import objects.Coach;
+import objects.FortuneService;
 
 import java.util.Objects;
 

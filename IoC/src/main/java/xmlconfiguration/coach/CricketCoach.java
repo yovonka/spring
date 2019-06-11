@@ -1,6 +1,7 @@
 package xmlconfiguration.coach;
 
-import xmlconfiguration.fortune.FortuneService;
+import objects.Coach;
+import objects.FortuneService;
 
 public class CricketCoach implements Coach {
 

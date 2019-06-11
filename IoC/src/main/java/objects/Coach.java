@@ -1,4 +1,4 @@
-package xmlconfiguration.coach;
+package objects;
 
 public interface Coach {
 

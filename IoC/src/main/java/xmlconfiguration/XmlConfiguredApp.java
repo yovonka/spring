@@ -1,7 +1,7 @@
 package xmlconfiguration;
 
+import objects.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import xmlconfiguration.coach.Coach;
 import xmlconfiguration.coach.CricketCoach;
 
 public class XmlConfiguredApp {
