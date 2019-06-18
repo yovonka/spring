@@ -1,6 +1,6 @@
 package javaannotation;
 
-import javaannotation.coach.CricketCoach;
+import objects.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class JavaAnnotationApp {
@@ -12,7 +12,14 @@ public class JavaAnnotationApp {
                 new ClassPathXmlApplicationContext("javaannotation/applicationContext.xml");
 
         // get the bean from spring container
-        CricketCoach theCoach = context.getBean("cricketCoach", CricketCoach.class);
+        Coach theCoach = context.getBean("tennisCoach", Coach.class);
+        Coach betaCoach = context.getBean("tennisCoach", Coach.class);
+
+        // check if they are the same
+        boolean result = (theCoach == betaCoach);
+        System.out.println("\nPointing to the same object: " + result);
+        System.out.println("Memory location for theCoach: " + theCoach);
+        System.out.println("Memory location for alphaCoach: " + betaCoach + "\n");
 
         // call a method on the bean
         System.out.println(theCoach.getDailyWorkout());
