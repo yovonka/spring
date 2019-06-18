@@ -3,15 +3,17 @@ package javaannotation.coach;
 import objects.Coach;
 import objects.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component()
 public class TennisCoach implements Coach {
 
+    //for DI Spring use auto-wiring
     private final FortuneService fortuneService;
 
-    @Autowired         //for DI Spring use auto-wiring
-    public TennisCoach(FortuneService fortuneService) {
+    @Autowired
+    public TennisCoach(@Qualifier("happyFortuneService") FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 

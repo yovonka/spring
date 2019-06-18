@@ -1,6 +1,6 @@
 package javaannotation;
 
-import objects.Coach;
+import javaannotation.coach.CricketCoach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class JavaAnnotationApp {
@@ -12,7 +12,7 @@ public class JavaAnnotationApp {
                 new ClassPathXmlApplicationContext("javaannotation/applicationContext.xml");
 
         // get the bean from spring container
-        Coach theCoach = context.getBean("tennisCoach", Coach.class);
+        CricketCoach theCoach = context.getBean("cricketCoach", CricketCoach.class);
 
         // call a method on the bean
         System.out.println(theCoach.getDailyWorkout());
