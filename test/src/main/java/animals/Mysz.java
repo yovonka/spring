@@ -1,4 +1,4 @@
-package objects;
+package animals;
 
 public class Mysz {
 }
