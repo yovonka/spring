@@ -2,15 +2,16 @@ package test;
 
 public class Test {
 
-    private int size;
+    private int amount;
     private Kot kot;
+    private Pies pies;
 
-    public int getSize() {
-        return size;
+    public int getAmount() {
+        return amount;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public Kot getKot() {
@@ -19,5 +20,13 @@ public class Test {
 
     public void setKot(Kot kot) {
         this.kot = kot;
+    }
+
+    public Pies getPies() {
+        return pies;
+    }
+
+    public void setPies(Pies pies) {
+        this.pies = pies;
     }
 }
