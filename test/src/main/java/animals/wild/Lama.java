@@ -1,4 +1,4 @@
-package animals;
+package animals.wild;
 
 public class Lama {
 }
