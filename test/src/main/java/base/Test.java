@@ -1,10 +1,15 @@
 package base;
 
+import animals.Kot;
+import animals.Pies;
+import animals.wild.Żyrafa;
+
 public class Test {
 
     private int amount;
     private Kot kot;
     private Pies pies;
+    private Żyrafa żyrafa;
 
     public int getAmount() {
         return amount;
@@ -28,5 +33,13 @@ public class Test {
 
     public void setPies(Pies pies) {
         this.pies = pies;
+    }
+
+    public Żyrafa getŻyrafa() {
+        return żyrafa;
+    }
+
+    public void setŻyrafa(Żyrafa żyrafa) {
+        this.żyrafa = żyrafa;
     }
 }

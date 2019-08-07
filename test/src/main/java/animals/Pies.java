@@ -1,4 +1,4 @@
 package animals;
 
-public class Mysz {
+public class Pies {
 }
